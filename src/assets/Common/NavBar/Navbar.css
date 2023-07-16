@@ -1,0 +1,47 @@
+.header-content {
+    background-color: #ebdede;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.active-link {
+    background-image: linear-gradient(180deg, rgb(29, 229, 255), rgba(10, 121, 134, 0.8));
+    font-weight: 500;
+    box-shadow: 0px 0px 4px rgba(85, 157, 199, 0.8);
+    color: white;
+}
+
+.menu a:hover {
+    border: 1px solid rgb(56, 187, 220, 0.9);
+    /* box-shadow: 0px 0px 4px rgba(173, 225, 255, 1); */
+    font-weight: 500;
+    color: white;
+}
+
+.navbar-bg {
+    color: white;
+    background-image: linear-gradient(180deg, rgb(8, 194, 218, 1), rgba(0, 145, 161, 0.8));
+}
+
+.logged-in-out {
+    background: linear-gradient(180deg, #15e4ff 0%, #075d67 90%);
+    background: #079fb0;
+    font-weight: 500;
+    color: white;
+    box-shadow: 0px 0px 4px rgb(160, 244, 255, 1);
+}
+
+.shadowAll {
+    box-shadow: 0px 0px 4px rgb(160, 244, 255, 1);
+}
+
+.text-color {
+    color: #15e4ff;
+}
+
+.shadowAlll {
+    box-shadow: 0px 0px 4px rgb(15, 202, 226);
+}
