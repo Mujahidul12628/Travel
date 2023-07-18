@@ -26,23 +26,31 @@ const DestinationTabs = () => {
     };
 
     const travelInformation = [
-        { label: 'Destination', value: 'Destination Name' },
-        { label: 'Departure', value: 'Departure Location' },
-        { label: 'Departure Time', value: 'Departure Time' },
-        { label: 'Return Time', value: 'Return Time' },
-        { label: 'Included', value: 'Included Services' },
-        { label: 'Not Included', value: 'Not Included Services' }
+        { label: 'Destination', value: ['Fermar Name'] },
+        { label: 'Departure', value: ['High Time'] },
+        { label: 'Departure Time', value: ['Kids zone Time'] },
+        { label: 'Return Time', value: ['Due money'] },
+        { label: 'Included', value: ['✓ Included Services 1', '✓ Included Services 2', '✓ Included Services 3', '✓ Included Services 4', '✓ Included Services 5'] },
+        { label: 'Not Included', value: ['✕ Not Included Services 1', '✕ Not Included Services 2', '✕ Not Included Services 3'] }
+    ];
+
+    const tripSteps = [
+        { id: 1, title: 'Day 1', description: 'Arrival and Check-in' },
+        { id: 2, title: 'Day 2', description: 'Exploring City Landmarks' },
+        { id: 3, title: 'Day 3', description: 'Outdoor Adventure Activities' },
+        { id: 4, title: 'Day 4', description: 'Relaxation and Spa Day' },
+        { id: 5, title: 'Day 5', description: 'Departure' },
     ];
 
     return (
         <div>
             <Tabs className="bg-red-100" selectedIndex={activeTab} onSelect={handleTabChange}>
-                <TabList className="flex bg-teal-500 shadow-xl max-w-fit">
+                <TabList className="flex flex-col border-0 shadow-xl bg-emerald-500 sm:flex-row max-w-fit">
                     <Tab
                         className={`mx-auto px-4 py-1 ${activeTab === 0
                             ? 'mx-auto   justify-center'
                             : 'bg-gray-300 '
-                            } cursor-pointer`}
+                            } `}
                         onClick={() => handleTabChange(0)}
                     >
                         Information
@@ -103,50 +111,63 @@ const DestinationTabs = () => {
                                         <div>Best Deals</div>
                                     </div>
 
-                                    <div className="border-gray-100 border-dotted">
+                                    {/* Package explain about tour */}
+                                    <div className="border-gray-100">
                                         {travelInformation.map(({ label, value }) => (
                                             <div
-                                                className="flex p-4 transition-all duration-300 transform bg-white border border-gray-400 border-dotted rounded-md shadow-md hover:-translate-y-1 hover:shadow-lg"
+                                                className="flex p-4 text-sm transition-all duration-300 transform border-b border-gray-400 border-dotted rounded-md shadow-md hover:-translate-y-1 hover:shadow-lg"
                                                 key={label}
                                             >
-                                                <div className="w-1/3">
-                                                    <h3 className="text-lg font-bold">{label}</h3>
+                                                <div className="w-full text-start sm:w-2/5 ">
+                                                    <h3 className="text-sm font-bold">{label}</h3>
                                                 </div>
-                                                <div className="flex items-center justify-start w-2/3">
-                                                    <p className="text-gray-600">{value}</p>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-
-                                    <div className="border-gray-100 border-dotted">
-                                        {travelInformation.map(({ label, value }) => (
-                                            <div
-                                                className="flex p-4 transition-all duration-300 transform bg-white border border-gray-400 border-dotted rounded-md shadow-md hover:-translate-y-1 hover:shadow-lg"
-                                                key={label}
-                                            >
-                                                <div className="w-1/3">
-                                                    <h3 className="text-lg font-bold">{label}</h3>
-                                                </div>
-                                                <div className="flex items-center justify-start w-2/3">
-                                                    <p className="ml-4 text-gray-600">{value}</p>
+                                                <div className="flex flex-col w-full sm:justify-start sm:items-start sm:flex-wrap sm:flex-row md:w-3/5">
+                                                    {value.map((item, index) => (
+                                                        <p className="ml-0 text-gray-600 sm:ml-10" key={index}>
+                                                            {item}
+                                                            {index !== value.length - 1 && ', '}
+                                                        </p>
+                                                    ))}
                                                 </div>
                                             </div>
                                         ))}
                                     </div>
 
 
+                                    {/* Carousel of SPOT */}
+                                    <div>
+                                        <h1 className='my-5 font-semibold text-md sm:text-lg'>Visiting Spot on this Place</h1>
+                                        <div className="carousel carousel-center rounded-box">
+                                            <div className="carousel-item">
+                                                <img src={destination.detailedImages[0]} alt="Pizza" />
+                                            </div>
+                                            <div className="carousel-item">
+                                                <img src={destination.detailedImages[1]} alt="Pizza" />
+                                            </div>
+                                            <div className="carousel-item">
+                                                <img src={destination.detailedImages[2]} alt="Pizza" />
+                                            </div>
+                                            <div className="carousel-item">
+                                                <img src={destination.detailedImages[3]} alt="Pizza" />
+                                            </div>
+                                            <div className="carousel-item">
+                                                <img src={destination.detailedImages[4]} alt="Pizza" />
+                                            </div>
+                                            <div className="carousel-item">
+                                                <img src={destination.detailedImages[5]} alt="Pizza" />
+                                            </div>
+                                        </div>
 
 
+                                    </div>
 
                                 </React.Fragment>
                             )}
                             {activeTab === 1 && (
-                                <div className="mb-2">Duration: {destination.travelDuration}
-                                    <p>Reviews: {destination.userReviews}</p>
+                                <div>
+
 
                                 </div>
-
                             )}
                             {activeTab === 2 && (
                                 <p className="mb-2">Price: {destination.visitPrice}</p>
