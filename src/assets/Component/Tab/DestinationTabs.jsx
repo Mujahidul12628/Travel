@@ -164,16 +164,98 @@ const DestinationTabs = () => {
                                 </React.Fragment>
                             )}
                             {activeTab === 1 && (
-                                <div>
+                                <div className="container px-4 mx-auto">
+                                    <h1 className="my-8 text-3xl font-bold">Travel Itinerary</h1>
 
+                                    <div className="space-y-8">
+                                        <div className="flex items-start">
+                                            <div className="flex items-center justify-center w-8 h-8 mr-4 text-white bg-blue-500 rounded-full">
+                                                1
+                                            </div>
+                                            <div>
+                                                <h3 className="text-xl font-semibold"><span className='d-none sm:d-block'>Step 1:</span> Departure</h3>
+                                                <p className="text-lg text-gray-600">Sightseeing and local attractions</p>
+                                                <ul className="pl-8 mt-2 list-disc">
+                                                    <li> <span className='font-semibold'>Visit famous landmarks</span> <span className='hidden sm:inline'>: Explore iconic landmarks and their architectural beauty and learn about their historical significance.</span> </li>
+                                                    <li> <span className='font-semibold'>Explore museums</span> <span className='hidden sm:inline'>: Immerse yourself in art, culture, and history and Discover fascinating exhibitions, collections.</span></li>
+                                                    <li> <span className='font-semibold'>Enjoy local cuisine</span><span className='hidden sm:inline'>: Indulge in the local flavors and culinary delights and authentic taste of the region.</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
 
+                                        <div className="flex items-start">
+                                            <div className="flex items-center justify-center w-8 h-8 mr-4 text-white bg-blue-500 rounded-full">
+                                                2
+                                            </div>
+                                            <div>
+                                                <h3 className="text-xl font-semibold">Step 2: Outdoor Adventure</h3>
+                                                <p className="text-lg text-gray-600">Hiking and nature exploration</p>
+                                                <ul className="pl-8 mt-2 list-disc">
+                                                    <li><span className='font-semibold'> Go hiking in the mountains</span><span className='hidden sm:inline'>: Embark on a thrilling hiking expedition through picturesque mountain trails. </span> </li>
+                                                    <li><span className='font-semibold'>Visit scenic viewpoints</span><span className='hidden sm:inline'>: Discover stunning panoramic views by visiting designated viewpoints along the hiking route.</span></li>
+                                                    <li><span className='font-semibold'>Try local outdoor activities</span><span className='hidden sm:inline'>:  Engage in exciting outdoor activities that highlight the regions natural offerings. </span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex items-start">
+                                            <div className="flex items-center justify-center w-8 h-8 mr-4 text-white bg-blue-500 rounded-full">
+                                                3
+                                            </div>
+                                            <div>
+                                                <h3 className="text-xl font-semibold">Step 3: Relaxation at the Beach</h3>
+                                                <p className="text-lg text-gray-600">Sun, sand, and water activities</p>
+                                                <ul className="pl-8 mt-2 list-disc">
+                                                    <li>Spend a day at the beach</li>
+                                                    <li>Swim in the crystal-clear water</li>
+                                                    <li>Try water sports</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex items-start">
+                                            <div className="flex items-center justify-center w-8 h-8 mr-4 text-white bg-blue-500 rounded-full">
+                                                4
+                                            </div>
+                                            <div>
+                                                <h3 className="text-xl font-semibold">Step 4: Cultural Exploration</h3>
+                                                <p className="text-lg text-gray-600">Immerse in local traditions and heritage</p>
+                                                <ul className="pl-8 mt-2 list-disc">
+                                                    <li>Visit historical sites</li>
+                                                    <li>Experience local festivals</li>
+                                                    <li>Discover traditional arts and crafts</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-start">
+                                            <div className="flex items-center justify-center w-8 h-8 mr-4 text-white bg-blue-500 rounded-full">
+                                                5
+                                            </div>
+                                            <div>
+                                                <h3 className="text-xl font-semibold"><span className='d-none sm:d-block'>Step 5:</span> Return</h3>
+                                                <p className="text-lg text-gray-600">Sightseeing and local attractions</p>
+                                                <ul className="pl-8 mt-2 list-disc">
+                                                    <li> <span className='font-semibold'>Visit famous landmarks</span> <span className='hidden sm:inline'>: Explore iconic landmarks and their architectural beauty and learn about their historical significance.</span> </li>
+                                                    <li> <span className='font-semibold'>Explore museums</span> <span className='hidden sm:inline'>: Immerse yourself in art, culture, and history and Discover fascinating exhibitions, collections.</span></li>
+                                                    <li> <span className='font-semibold'>Enjoy local cuisine</span><span className='hidden sm:inline'>: Indulge in the local flavors and culinary delights and authentic taste of the region.</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             )}
                             {activeTab === 2 && (
                                 <p className="mb-2">Price: {destination.visitPrice}</p>
                             )}
                             {activeTab === 3 && (
-                                <p className="mt-4">{destination.placeDescription}</p>
+                                <div>
+                                    {data[detailedImages].map(place => (
+                                        <div key={place.id}>
+                                            <h2>{place.placeName}</h2>
+                                            <p>{place.placeDescription}</p>
+                                        </div>
+                                    ))}
+                                </div>
                             )}
                             {activeTab === 4 && (
                                 <p className="mb-2">Duration: {destination.travelDuration}
