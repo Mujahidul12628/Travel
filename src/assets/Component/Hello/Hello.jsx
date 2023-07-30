@@ -12,7 +12,7 @@ const Hello = () => {
 
     return (
         <div className='my-5'>
-            <h1 className='mb-5 text-3xl font-bold text-center text-cyan-500'>Travel Places</h1>
+            <h1 className='mb-5 text-3xl font-bold text-center text-cyan-500'>Travel Gallery Sect</h1>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
                 {destinations.map((destination) => (
                     <div className="p-4 border border-gray-300 rounded-md shadowAlll bg-cyan-50" key={destination.id}>
