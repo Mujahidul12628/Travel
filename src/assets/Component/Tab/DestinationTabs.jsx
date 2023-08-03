@@ -4,6 +4,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import Location from './Location';
+import GalleryData from './GalleryData';
+import Reviews from './Reviews';
 
 const DestinationTabs = () => {
     const [data, setData] = useState([]);
@@ -245,23 +248,19 @@ const DestinationTabs = () => {
                                 </div>
                             )}
                             {activeTab === 2 && (
-                                <p className="mb-2">Price: {destination.visitPrice}</p>
+                                <div>
+                                    <Location></Location>
+                                </div>
                             )}
                             {activeTab === 3 && (
                                 <div>
-                                    {data[detailedImages].map(place => (
-                                        <div key={place.id}>
-                                            <h2>{place.placeName}</h2>
-                                            <p>{place.placeDescription}</p>
-                                        </div>
-                                    ))}
+                                    <GalleryData></GalleryData>
                                 </div>
                             )}
                             {activeTab === 4 && (
-                                <p className="mb-2">Duration: {destination.travelDuration}
-                                    <p>Reviews: {destination.userReviews}</p>
-
-                                </p>
+                                <div>
+                                    <Reviews></Reviews>
+                                </div>
 
                             )}
                         </div>
