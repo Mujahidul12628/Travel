@@ -7,6 +7,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Location from './Location';
 import GalleryData from './GalleryData';
 import Reviews from './Reviews';
+import ReviewData from './ReviewData';
 
 const DestinationTabs = () => {
     const [data, setData] = useState([]);
@@ -99,7 +100,7 @@ const DestinationTabs = () => {
                 {data.map((destination, index) => (
                     <TabPanel key={index}>
                         <div
-                            className="p-4 border border-gray-300 shadow-md bg-cyan-50"
+                            className="p-2 border border-gray-300 shadow-md bg-cyan-50"
                         >
                             {activeTab === 0 && (
                                 <React.Fragment>
@@ -258,8 +259,13 @@ const DestinationTabs = () => {
                                 </div>
                             )}
                             {activeTab === 4 && (
-                                <div>
-                                    <Reviews></Reviews>
+                                <div className=''>
+                                    <div className='hidden md:block '>
+                                        <Reviews></Reviews>
+                                    </div>
+                                    <div className='block md:hidden'>
+                                        <ReviewData></ReviewData>
+                                    </div>
                                 </div>
 
                             )}

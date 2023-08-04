@@ -25,7 +25,7 @@ const Reviews = () => {
         <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={5}
-            slidesPerView={3}
+            slidesPerView={2}
             navigation
             pagination={{ clickable: true }}
             // scrollbar={{ draggable: true }}
@@ -39,7 +39,7 @@ const Reviews = () => {
                             <img className='w-full h-32 rounded-t-lg sm:h-36 md:h-40 lg:h-44' src={review.PlaceImage} alt="" />
                         </div>
                         <div className='rounded-b-lg '>
-                            <div className='mb-10'>
+                            <div className='mb-10 '>
                                 <img className='w-16 h-16 mx-auto -m-10 rounded-full bg-slate-300 lg:w-20 lg:h-20' src={review.userImage} alt="" />
                             </div>
                             <p className='text-xl font-semibold text-center'>{review.userName}</p>
@@ -52,7 +52,7 @@ const Reviews = () => {
                                 <FaStar className='mx-1' size={22} color="gold" />
                                 <FaStar className='mx-1' size={22} color="gold" />
                             </div>
-                            <p className='px-2 text-justify lg:px-2'>{review.text}</p>
+                            <p className='hidden px-2 text-justify lg:px-2 sm:block '>{review.text}</p>
                             <div className='flex items-center justify-center my-6'>
                                 <span className='mx-1'> <FaRegClock size={20} /> </span>
                                 <span className=''>{review.Time} </span>
