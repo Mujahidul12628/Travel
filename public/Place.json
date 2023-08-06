@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "placeName": "Grand Canyon",
+        "placeCountry": "Arizona",
+        "visitingPrice": "$25",
+        "placeImage": "https://i.ibb.co/m9jFw6r/1332264-popular-hd-grand-canyon-wallpapers-2560x1600-Custom-1.jpg"
+    },
+    {
+        "id": 2,
+        "placeName": "Khao Sok Park,",
+        "placeCountry": "Thailand",
+        "visitingPrice": "$20",
+        "placeImage": "https://i.ibb.co/bdNwrkX/KhaoSok.jpg"
+    },
+    {
+        "id": 3,
+        "placeName": "Sapa",
+        "placeCountry": "Vietnam",
+        "visitingPrice": "$30",
+        "placeImage": "https://i.ibb.co/Wc7cQBc/Sapa.jpg"
+    },
+    {
+        "id": 4,
+        "placeName": "Grand Canyon",
+        "placeCountry": "Arizona",
+        "visitingPrice": "$25",
+        "placeImage": "https://i.ibb.co/m9jFw6r/1332264-popular-hd-grand-canyon-wallpapers-2560x1600-Custom-1.jpg"
+    },
+    {
+        "id": 5,
+        "placeName": "Machu Picchu",
+        "placeCountry": "Peru",
+        "visitingPrice": "$30",
+        "placeImage": "https://example.com/machu-picchu.jpg"
+    },
+    {
+        "id": 6,
+        "placeName": "Machu Picchu",
+        "placeCountry": "Peru",
+        "visitingPrice": "$30",
+        "placeImage": "https://example.com/machu-picchu.jpg"
+    },
+    {
+        "id": 7,
+        "placeName": "Machu Picchu",
+        "placeCountry": "Peru",
+        "visitingPrice": "$30",
+        "placeImage": "https://example.com/machu-picchu.jpg"
+    },
+    {
+        "id": 8,
+        "placeName": "Machu Picchu",
+        "placeCountry": "Peru",
+        "visitingPrice": "$30",
+        "placeImage": "https://example.com/machu-picchu.jpg"
+    },
+    {
+        "id": 9,
+        "placeName": "Machu Picchu",
+        "placeCountry": "Peru",
+        "visitingPrice": "$30",
+        "placeImage": "https://example.com/machu-picchu.jpg"
+    },
+    {
+        "id": 10,
+        "placeName": "Machu Picchu",
+        "placeCountry": "Peru",
+        "visitingPrice": "$30",
+        "placeImage": "https://example.com/machu-picchu.jpg"
+    },
+    {
+        "id": 11,
+        "placeName": "Machu Picchu",
+        "placeCountry": "Peru",
+        "visitingPrice": "$30",
+        "placeImage": "https://example.com/machu-picchu.jpg"
+    },
+    {
+        "id": 12,
+        "placeName": "Machu Picchu",
+        "placeCountry": "Peru",
+        "visitingPrice": "$30",
+        "placeImage": "https://example.com/machu-picchu.jpg"
+    },
+    {
+        "id": 13,
+        "placeName": "Machu Picchu",
+        "placeCountry": "Peru",
+        "visitingPrice": "$30",
+        "placeImage": "https://example.com/machu-picchu.jpg"
+    },
+    {
+        "id": 14,
+        "placeName": "Machu Picchu",
+        "placeCountry": "Peru",
+        "visitingPrice": "$30",
+        "placeImage": "https://example.com/machu-picchu.jpg"
+    },
+    {
+        "id": 15,
+        "placeName": "Machu Picchu",
+        "placeCountry": "Peru",
+        "visitingPrice": "$30",
+        "placeImage": "https://example.com/machu-picchu.jpg"
+    }
+]

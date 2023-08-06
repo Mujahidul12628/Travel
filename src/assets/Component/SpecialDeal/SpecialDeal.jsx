@@ -4,7 +4,6 @@ const UserCarousel = () => {
     const [userData, setUserData] = useState([]);
 
     useEffect(() => {
-        // Fetch data from the JSON file
         fetch('../../../../public//Reviews.json')
             .then(response => response.json())
             .then(data => setUserData(data))
@@ -16,11 +15,14 @@ const UserCarousel = () => {
             <div className="rounded-md carousel">
                 {userData.map(user => (
                     <div className="carousel-item" key={user.Id}>
-                        <img src={user.place} alt={user.userName} />
-                        {/* <h3>{user.userName}</h3>
-                        <p>{user.text}</p>
-                        <p>{user.Time}</p>
-                        <p>{user.userCategory}</p> */}
+                        <div className="relative group">
+                            <img src={user.place} alt={user.userName} className="w-full rounded-md" />
+                            <div className="absolute bottom-0 left-0 w-full p-2 transition-opacity duration-300 bg-opacity-25 opacity-0 bg-cyan-500 group-hover:opacity-100">
+                                <p className="text-white">Name: {user.userName}</p>
+                                <p className="text-white">Country: {user.country}</p>
+                                <p className="text-white">Price: {user.price}</p>
+                            </div>
+                        </div>
                     </div>
                 ))}
             </div>
