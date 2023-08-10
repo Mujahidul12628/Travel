@@ -50,15 +50,15 @@ import CountUp from 'react-countup';
 
 const Counter = () => {
     const memberStart = 0;
-    const memberEnd = 500000;
+    const memberEnd = 5000;
     const memberDuration = 10;
 
     const spotStart = 0;
-    const spotEnd = 500000;
+    const spotEnd = 5000;
     const spotDuration = 10;
 
     const countryStart = 0;
-    const countryEnd = 2000000;
+    const countryEnd = 20000;
     const countryDuration = 10;
 
     const reviewStart = 0;
@@ -67,7 +67,7 @@ const Counter = () => {
 
     return (
         <div className="flex items-center justify-center">
-            <div className="grid w-full grid-cols-2 gap-2 sm:gap-2 md:gap-4 sm:grid-cols-4 sm:w-max ">
+            <div className="grid w-full grid-cols-2 gap-2 sm:w-fit sm:gap-2 md:gap-4 sm:grid-cols-4 ">
                 <div className="p-2 text-center bg-white rounded-lg md:p-4 lg:p-6 shadowAlll">
                     <h2 className="mb-1 font-semibold sm:mb-4 text-md sm:text-lg">Total Members</h2>
                     <CountUp

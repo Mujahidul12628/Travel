@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { HiBadgeCheck } from "react-icons/hi";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -28,29 +29,34 @@ const Reviews = () => {
             slidesPerView={3}
             navigation
             pagination={{ clickable: true }}
-            // scrollbar={{ draggable: true }}
+            scrollbar={{ draggable: true }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
         >
             {reviewsData.map((review) => (
                 <SwiperSlide key={review.id}>
+
                     <div className='p-2 m-1 rounded-lg bg-slate-50 shadowAlll'>
-                        <div>
-                            <img className='w-full h-32 rounded-t-lg sm:h-36 md:h-40 lg:h-44' src={review.PlaceImage} alt="" />
+                        <div className="relative">
+                            <img className='z-0 w-full h-32 rounded-t-lg sm:h-36 md:h-40 lg:h-44' src={review.PlaceImage} alt="" />
                         </div>
-                        <div className='rounded-b-lg '>
-                            <div className='mb-10'>
-                                <img className='w-16 h-16 mx-auto -m-10 rounded-full bg-slate-300 lg:w-20 lg:h-20' src={review.userImage} alt="" />
+                        <div className='relative rounded-b-lg'>
+                            <div className='mb-12'>
+                                <img className='z-10 w-16 h-16 mx-auto -m-10 rounded-full bg-opacity-60 bg-cyan-500 lg:w-20 lg:h-20 ' src={review.userImage} alt="" />
                             </div>
+
                             <p className='text-xl font-semibold text-center'>{review.userName}</p>
-                            <div className='text-center text-md text-slate-500'>{review.userCategory}
+                            <div className='flex items-center justify-center text-md text-slate-500'>
+                                <span>{review.userCategory}</span>
+                                <span><HiBadgeCheck className='mx-1 text-blue-500 text-md' /></span>
                             </div>
                             <div className='flex justify-center p-1 my-2'>
-                                <FaStar className='mx-1' size={22} color="gold" />
-                                <FaStar className='mx-1' size={22} color="gold" />
-                                <FaStar className='mx-1' size={22} color="gold" />
-                                <FaStar className='mx-1' size={22} color="gold" />
-                                <FaStar className='mx-1' size={22} color="gold" />
+                                <FaStar className='mx-1' size={17} color="gold" />
+                                <FaStar className='mx-1' size={17} color="gold" />
+                                <FaStar className='mx-1' size={17} color="gold" />
+                                <FaStar className='mx-1' size={17} color="gold" />
+                                <FaStar className='mx-1' size={17} color="gold" />
+
                             </div>
                             <p className='px-2 text-justify lg:px-2'>{review.text}</p>
                             <div className='flex items-center justify-center my-6'>
@@ -60,8 +66,8 @@ const Reviews = () => {
 
 
                         </div>
-
                     </div>
+
                 </SwiperSlide>
             ))}
         </Swiper>
