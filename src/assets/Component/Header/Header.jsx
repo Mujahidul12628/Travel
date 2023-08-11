@@ -25,88 +25,116 @@ const Header = () => {
             >
 
                 <SwiperSlide>
-                    <div className="h-screen sm:h-[700px] relative rounded-b flex items-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/C2kh8B9/S3.jpg')]">
-                        <div className="absolute w-full h-full bg-black opacity-25"></div>
+                    <div className="h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[600px] relative rounded-b flex flex-col items-center justify-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/C2kh8B9/S3.jpg')]">
+                        <div className="absolute w-full h-full bg-black opacity-40"></div>
                         <div className="z-10 p-5 mx-auto text-center sm:w-2/3 sm:pl-10">
-                            <h2 className="text-2xl font-bold text-white sm:text-6xl ">
-                                Welcome & Enjoy <br /> World-Class Cuisine Recipes
+                            <h2 className="text-3xl font-bold text-white sm:text-3xl ">
+                                Elevate Your Adventures<span className='hidden sm:inline-block'>, Choose TrekVibes</span>
                             </h2>
-                            <p className="mt-5 text-xl text-slate-400 sm:text-2xl">
-                                Family Dinner, date night, brunches, parties, get-togethers and even
-                                meals for the entire week.
+                            <p className="w-5/6 mx-auto mt-5 text-justify text-md text-slate-300 sm:text-lg">
+                                Embark on unforgettable adventures with TrekVibes. Your gateway to thrilling travel experiences worldwide, igniting wanderlust and creating memories that last a lifetime.
                             </p>
-                            <button
-                                onClick={() => scrollToTarget("popularRecipes")}
-                                className="px-3 py-2 mt-10 text-2xl text-white border shadow hover:bg-amber-500 border-amber-500 shadow-amber-500"
-                            >
-                                SEE OUR RECIPES
-                            </button>
+                            <div className='flex items-center justify-center'>
+                                <button
+                                    onClick={() => scrollToTarget("popularRecipes")}
+                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white border-2 rounded-md shadow hover:bg-cyan-500 border-cyan-500 shadow-cyan-500"
+                                >
+                                    Booked Now
+                                </button>
+                                <button
+                                    onClick={() => scrollToTarget("popularRecipes")}
+                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white border-2 rounded-md shadow-lg bg-cyan-500 border-cyan-500 hover:bg-transparent hover:border-2"
+                                >
+                                    Details
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <div className="h-screen sm:h-[700px] relative rounded-b flex items-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/Mh81F1B/S1.jpg')]">
-                        <div className="absolute w-full h-full bg-black opacity-25"></div>
+                    <div className="h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[600px] relative rounded-b flex flex-col items-center justify-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/Mh81F1B/S1.jpg')]">
+                        <div className="absolute w-full h-full bg-black opacity-40"></div>
                         <div className="z-10 p-5 mx-auto text-center sm:w-2/3 sm:pl-10">
-                            <h2 className="text-2xl font-bold text-white sm:text-6xl ">
-                                Welcome & Enjoy <br /> World-Class Cuisine Recipes
+                            <h2 className="text-3xl font-bold text-white sm:text-3xl ">
+                                Boundless Discoveries<span className='hidden sm:inline-block'>, TrekVibes Unlocked.</span>
                             </h2>
-                            <p className="mt-5 text-xl text-slate-400 sm:text-2xl">
-                                Family Dinner, date night, brunches, parties, get-togethers and even
-                                meals for the entire week.
+                            <p className="w-5/6 mx-auto mt-5 text-justify text-md text-slate-300 sm:text-lg">
+                                Journey to extraordinary destinations with TrekVibes. Unleash your inner explorer and create timeless memories through captivating travel experiences around the world.
                             </p>
-                            <button
-                                onClick={() => scrollToTarget("popularRecipes")}
-                                className="px-3 py-2 mt-10 text-2xl text-white border shadow hover:bg-amber-500 border-amber-500 shadow-amber-500"
-                            >
-                                SEE OUR RECIPES
-                            </button>
+                            <div className='flex items-center justify-center'>
+                                <button
+                                    onClick={() => scrollToTarget("popularRecipes")}
+                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white border-2 rounded-md shadow hover:bg-cyan-500 border-cyan-500 shadow-cyan-500"
+                                >
+                                    Booked Now
+                                </button>
+                                <button
+                                    onClick={() => scrollToTarget("popularRecipes")}
+                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white border-2 rounded-md shadow-lg bg-cyan-500 border-cyan-500 hover:bg-transparent hover:border-2"
+                                >
+                                    Details
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <div className="h-screen sm:h-[700px] relative rounded-b flex items-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/9q3zCQz/s4.jpg')]">
-                        <div className="absolute w-full h-full bg-black opacity-25"></div>
+                    <div className="h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[600px] relative rounded-b flex flex-col items-center justify-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/9q3zCQz/s4.jpg')]">
+                        <div className="absolute w-full h-full bg-black opacity-50"></div>
                         <div className="z-10 p-5 mx-auto text-center sm:w-2/3 sm:pl-10">
-                            <h2 className="text-2xl font-bold text-white sm:text-6xl ">
-                                Welcome & Enjoy <br /> World-Class Cuisine Recipes
+                            <h2 className="text-3xl font-bold text-white sm:text-3xl ">
+                                <span className='hidden sm:inline-block'>Embark on</span> Life-Changing Journeys
                             </h2>
-                            <p className="mt-5 text-xl text-slate-400 sm:text-2xl">
-                                Family Dinner, date night, brunches, parties, get-togethers and even
-                                meals for the entire week.
+                            <p className="w-5/6 mx-auto mt-5 text-justify text-md text-slate-300 sm:text-lg">
+                                TrekVibes: Where thrilling adventures begin. Explore diverse cultures, stunning landscapes, and hidden gems, making every moment an unforgettable chapter of your global journey.
                             </p>
-                            <button
-                                onClick={() => scrollToTarget("popularRecipes")}
-                                className="px-3 py-2 mt-10 text-2xl text-white border shadow hover:bg-amber-500 border-amber-500 shadow-amber-500"
-                            >
-                                SEE OUR RECIPES
-                            </button>
+                            <div className='flex items-center justify-center'>
+                                <button
+                                    onClick={() => scrollToTarget("popularRecipes")}
+                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white border-2 rounded-md shadow hover:bg-cyan-500 border-cyan-500 shadow-cyan-500"
+                                >
+                                    Booked Now
+                                </button>
+                                <button
+                                    onClick={() => scrollToTarget("popularRecipes")}
+                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white border-2 rounded-md shadow-lg bg-cyan-500 border-cyan-500 hover:bg-transparent hover:border-2"
+                                >
+                                    Details
+                                </button>
+                            </div>
                         </div>
                     </div>
 
                 </SwiperSlide>
-
 
 
                 <SwiperSlide >
-                    <div className="h-screen sm:h-[700px] lg:h-[500px] relative rounded-b flex flex-col items-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/9s8L96c/s8-Custom.jpg')]">
-                        <div className="absolute w-full h-full bg-black opacity-25"></div>
+                    <div className="h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[600px] relative rounded-b flex flex-col items-center justify-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/9s8L96c/s8-Custom.jpg')]">
+                        <div className="absolute w-full h-full bg-black opacity-40"></div>
                         <div className="z-10 p-5 mx-auto text-center sm:w-2/3 sm:pl-10">
-                            <h2 className="text-2xl font-bold text-white sm:text-6xl ">
-                                Welcome & Enjoy <br /> World-Class Cuisine Recipes
+                            <h2 className="text-3xl font-bold text-white sm:text-3xl ">
+                                Embrace the Journey<span className='hidden sm:inline-block'>, Choose TrekVibes</span>
                             </h2>
-                            <p className="mt-5 text-xl text-slate-400 sm:text-2xl">
-                                Family Dinner, date night, brunches, parties, get-togethers and even
-                                meals for the entire week.
+                            <p className="w-5/6 mx-auto mt-5 text-justify text-md text-slate-300 sm:text-lg">
+                                Step into a world of wonders with TrekVibes. Embrace thrilling expeditions, cultural immersion, and awe-inspiring landscapes, crafting a tapestry of unforgettable travel tales and experiences.
                             </p>
-                            <button
-                                onClick={() => scrollToTarget("popularRecipes")}
-                                className="px-3 py-2 mt-10 text-2xl text-white border shadow hover:bg-amber-500 border-amber-500 shadow-amber-500"
-                            >
-                                SEE OUR RECIPES
-                            </button>
+                            <div className='flex items-center justify-center'>
+                                <button
+                                    onClick={() => scrollToTarget("popularRecipes")}
+                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white border-2 rounded-md shadow hover:bg-cyan-500 border-cyan-500 shadow-cyan-500"
+                                >
+                                    Booked Now
+                                </button>
+                                <button
+                                    onClick={() => scrollToTarget("popularRecipes")}
+                                    className="px-2 py-1 mx-3 mt-10 text-2xl text-white border-2 rounded-md shadow-lg bg-cyan-500 border-cyan-500 hover:bg-transparent hover:border-2"
+                                >
+                                    Details
+                                </button>
+                            </div>
+
 
                         </div>
                     </div>
