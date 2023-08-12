@@ -33,6 +33,8 @@ const Navbar = () => {
                     </label>
                     <ul tabIndex={0} className="p-2 mt-3 shadow menu menu-compact dropdown-content rounded-box w-44 btn-bg bg-cyan-600 ">
                         <li><NavLink className={({ isActive, isPending }) => isActive ? "active-link" : isPending ? "pending" : ""} to='/'>Home</NavLink ></li>
+                        <li><NavLink className={({ isActive, isPending }) => isActive ? "active-link" : isPending ? "pending" : ""} to='/login'>Login</NavLink ></li>
+                        <li><NavLink className={({ isActive, isPending }) => isActive ? "active-link" : isPending ? "pending" : ""} to='/register'>Register</NavLink ></li>
                     </ul>
                 </div>
                 <Link to='/' className="text-2xl font-semibold "><span className='text-[#ffffff]'>
@@ -46,6 +48,8 @@ const Navbar = () => {
             <div className="hidden navbar-center md:flex">
                 <ul className="gap-2 px-1 text-white menu menu-horizontal">
                     <li><NavLink className={({ isActive, isPending }) => isActive ? "active-link" : isPending ? "pending" : ""} to='/'>Home</NavLink></li>
+                    <li><NavLink className={({ isActive, isPending }) => isActive ? "active-link" : isPending ? "pending" : ""} to='/login'>Login</NavLink></li>
+                    <li><NavLink className={({ isActive, isPending }) => isActive ? "active-link" : isPending ? "pending" : ""} to='/register'>Register</NavLink></li>
                 </ul>
             </div>
 

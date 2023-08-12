@@ -11,6 +11,7 @@ import {
 import MainLayout from './assets/Common/MainLayout/MainLayout';
 import Home from './assets/Component/Home/Home';
 import Login from './assets/Pages/Login/Login';
+import Register from './assets/Pages/Register/Register';
 
 const router = createBrowserRouter([
   {

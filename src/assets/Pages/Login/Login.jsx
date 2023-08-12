@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { RiEyeFill, RiEyeOffFill } from 'react-icons/ri';
-
+import google from '../../images/google.jpg'
 
 const Login = () => {
-    const { signIn, signInWithGoogle } = useContext(AuthContext);
+    // const { signIn, signInWithGoogle } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate()
 
@@ -45,12 +45,12 @@ const Login = () => {
     };
 
     return (
-        <div className="min-h-screen hero bg-base-200">
-            <div className="flex-col min-w-full hero-content">
+        <div className="hero min-h-screen bg-base-200">
+            <div className="hero-content flex-col min-w-full">
                 <div className="text-center lg:text-left">
                     <h1 className="text-3xl font-bold">Login</h1>
                 </div>
-                <form onSubmit={handleLogin} className="flex-shrink-0 w-full max-w-sm shadow-2xl card bg-base-100">
+                <form onSubmit={handleLogin} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
                         <div className="form-control">
                             <label className="label">
@@ -63,7 +63,7 @@ const Login = () => {
                                 <span className="label-text">Password</span>
                             </label>
                             {/* <div className="relative">
-                                <input type={showPassword ? 'text' : 'password'} name="password" placeholder="password" className="pr-10 input input-bordered"
+                                <input type={showPassword ? 'text' : 'password'} name="password" placeholder="password" className="input input-bordered pr-10"
 
                                 />
                                 <span className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer" onClick={togglePasswordVisibility}>
@@ -76,9 +76,9 @@ const Login = () => {
                                     type={showPassword ? 'text' : 'password'}
                                     name="password"
                                     placeholder="password"
-                                    className="w-full bg-black input input-bordered"
+                                    className="input input-bordered bg-black w-full"
                                 />
-                                <span className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer" onClick={togglePasswordVisibility}>
+                                <span className="absolute inset-y-0 pr-3 right-0 flex items-center cursor-pointer" onClick={togglePasswordVisibility}>
                                     {showPassword ? <RiEyeFill /> : <RiEyeOffFill />}
                                 </span>
                             </div>
@@ -87,13 +87,13 @@ const Login = () => {
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>
-                        <div className="mt-6 form-control">
-                            <button className="py-2 text-white rounded-lg bg-cyan-500 md:py-2">Login</button>
+                        <div className="form-control mt-6">
+                            <button className="bg-cyan-500 py-2 md:py-2 rounded-lg text-white">Login</button>
                         </div>
                         <div className='mx-auto mt-3'><span>Haven not any account yet? </span><Link to="/register" className='text-blue-500'> Register</Link></div>
-                        <div className="mt-6 form-control">
-                            <button onClick={handleGoogleSignIn} className="py-2 text-black bg-white border-2 rounded-lg border-cyan-500 md:py-2">
-                                <img className='w-1/5 mx-auto rounded-lg ' src={google} alt="Photo 4" />
+                        <div className="form-control mt-6">
+                            <button onClick={handleGoogleSignIn} className="bg-white border-2 border-cyan-500 py-2 md:py-2 rounded-lg text-black">
+                                <img className=' rounded-lg w-1/5 mx-auto' src={google} alt="Photo 4" />
                             </button>
                         </div>
                     </div>
