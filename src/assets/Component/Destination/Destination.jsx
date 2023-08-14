@@ -6,7 +6,10 @@ const Destination = () => {
     useEffect(() => {
         fetch('http://localhost:5012/travelPlaces')
             .then(response => response.json())
-            .then(data => setDestination(data))
+            .then(data => {
+                console.log('Fetched data:', data);
+                setDestination(data);
+            })
             .catch(error => console.error('Error fetching class data:', error));
     }, []);
     return (
