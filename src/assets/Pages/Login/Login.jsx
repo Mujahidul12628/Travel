@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+
 import { RiEyeFill, RiEyeOffFill } from 'react-icons/ri';
 import google from '../../images/google.jpg'
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
-    // const { signIn, signInWithGoogle } = useContext(AuthContext);
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate()
 

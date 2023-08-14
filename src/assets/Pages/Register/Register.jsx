@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-// import { AuthContext } from '../../Providers/AuthProviders';
+import { AuthContext } from '../../providers/AuthProvider';
+
 
 const Register = () => {
     const [error, setError] = useState('')
     const [success, setSuccess] = useState('')
 
-    // const { user, createUser } = useContext(AuthContext)
-    // console.log(user, createUser)
+    const { user, createUser } = useContext(AuthContext);
+    console.log(user, createUser)
 
     const handleRegister = event => {
         event.preventDefault();
