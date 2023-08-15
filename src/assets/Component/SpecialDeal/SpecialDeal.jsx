@@ -49,7 +49,7 @@ const UserCarousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
-        fetch('../../../../public/Place.json')
+        fetch('https://travel-server-mujahidul12628.vercel.app/place')
             .then(response => response.json())
             .then(data => {
                 setUserData(data);
@@ -67,6 +67,7 @@ const UserCarousel = () => {
 
     return (
         <div className='mt-10'>
+            <h1 className='mb-5 text-3xl font-bold text-center text-cyan-500'>Discounted Deal</h1>
             <div className="rounded-md carousel">
                 {userData.map((user, index) => (
                     <div className={`w-2/4 sm:w-2/6 lg:w-1/4 carousel-item ${index === currentIndex ? 'active' : ''}`} key={user.Id}>

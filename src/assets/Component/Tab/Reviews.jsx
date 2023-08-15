@@ -15,8 +15,7 @@ const Reviews = () => {
     const [reviewsData, setReviewsData] = useState([]);
 
     useEffect(() => {
-        // Fetch the review data from your API
-        fetch('../../../../public/Reviews.json')
+        fetch('https://travel-server-mujahidul12628.vercel.app/reviews')
             .then(response => response.json())
             .then(data => setReviewsData(data))
             .catch(error => console.error('Error fetching reviews:', error));

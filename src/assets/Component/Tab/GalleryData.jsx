@@ -4,7 +4,7 @@ const GalleryData = () => {
     const [jsonData, setJsonData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5012/travelPlacesDetails')
+        fetch('https://travel-server-flame.vercel.app/travelPlacesDetails')
             .then(response => response.json())
             .then(data => setJsonData(data))
             .catch(error => console.error('Error fetching data:', error));

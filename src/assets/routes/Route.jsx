@@ -12,6 +12,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import MainLayout from "../Common/MainLayout/MainLayout";
 import ErrorPage from "../Common/ErrorPage/ErrorPage";
+import Blog from "../Component/Blog/Blog";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>
+            },
+            {
+                path: "/blog",
+                element: <Blog></Blog>
             },
             // {
             //     path: "/chef/:id",

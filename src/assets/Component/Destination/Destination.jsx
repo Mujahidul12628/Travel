@@ -4,7 +4,7 @@ const Destination = () => {
     const [destination, setDestination] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5012/travelPlaces')
+        fetch('https://travel-server-flame.vercel.app/travelPlaces')
             .then(response => response.json())
             .then(data => {
                 console.log('Fetched data:', data);

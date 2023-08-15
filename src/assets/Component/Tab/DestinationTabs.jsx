@@ -8,6 +8,7 @@ import Location from './Location';
 import GalleryData from './GalleryData';
 import Reviews from './Reviews';
 import ReviewData from './ReviewData';
+import VisitingSpot from './visitingSpot';
 
 const DestinationTabs = () => {
     const [data, setData] = useState([]);
@@ -17,7 +18,7 @@ const DestinationTabs = () => {
     }, []);
 
     const fetchData = () => {
-        fetch('http://localhost:5012/travelPlacesDetails')
+        fetch('https://travel-server-flame.vercel.app/travelPlacesDetails')
             .then(response => response.json())
             .then(data => setData(data))
             .catch(error => console.error('Error fetching API data:', error));
@@ -105,14 +106,15 @@ const DestinationTabs = () => {
                             {activeTab === 0 && (
                                 <React.Fragment>
                                     <h3 className="mb-2 text-lg font-bold">
-                                        {destination.placeName}
+                                        {/* {destination.placeName} */}
+                                        Destination
                                     </h3>
                                     <p className="mt-3 text-sm text-justify text-slate-500">Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec.</p>
-                                    <div className='flex justify-around p-3 my-5 bg-slate-500'>
-                                        <div>7 days</div>
-                                        <div>18+ Age</div>
-                                        <div>Maldives</div>
-                                        <div>Best Deals</div>
+                                    <div className='flex justify-around p-3 my-5 bg-cyan-500 bg-opacity-80'>
+                                        <div className='font-semibold text-white'>7 days</div>
+                                        <div className='font-semibold text-white'>18+ Age</div>
+                                        <div className='font-semibold text-white'>Maldives</div>
+                                        <div className='font-semibold text-white'>Best Deals</div>
                                     </div>
 
                                     {/* Package explain about tour */}
@@ -140,7 +142,7 @@ const DestinationTabs = () => {
 
                                     {/* Carousel of SPOT */}
                                     <div>
-                                        <h1 className='my-5 font-semibold text-md sm:text-lg'>Visiting Spot on this Place</h1>
+                                        {/* <h1 className='my-5 font-semibold text-md sm:text-lg'>Visiting Spot on this Place</h1>
                                         <div className="carousel carousel-center rounded-box">
                                             <div className="carousel-item">
                                                 <img src={destination.detailedImages[0]} alt="Pizza" />
@@ -160,7 +162,8 @@ const DestinationTabs = () => {
                                             <div className="carousel-item">
                                                 <img src={destination.detailedImages[5]} alt="Pizza" />
                                             </div>
-                                        </div>
+                                        </div> */}
+                                        {/* <VisitingSpot></VisitingSpot> */}
 
 
                                     </div>
