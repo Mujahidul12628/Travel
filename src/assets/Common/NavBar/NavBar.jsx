@@ -47,7 +47,7 @@ const Navbar = () => {
                 <Link to='/' className="text-2xl font-semibold "><span className='text-[#ffffff]'>
                     {/* <img className="h-[60%] w-[60%] object-contain sm:h-[40%] sm:w-[40%] md:h-[50%] md:w-[50%]" src={logo} alt="" /> */}
 
-                    Sports Camp
+                    Trek Vibes
 
                 </span></Link>
             </div>
