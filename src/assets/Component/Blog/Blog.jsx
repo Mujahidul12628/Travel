@@ -7,6 +7,18 @@ const Blog = () => {
     const [data, setData] = useState([]);
     const [showFullText, setShowFullText] = useState(false);
 
+    const [email, setEmail] = useState('');
+
+    const handleEmailChange = (event) => {
+        setEmail(event.target.value);
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // You can add your subscription logic here, e.g., sending the email to a backend server.
+        console.log(`Subscribing with email: ${email}`);
+    };
+
     const toggleShowFullText = () => {
         setShowFullText(!showFullText);
     };
@@ -40,7 +52,7 @@ const Blog = () => {
     };
 
     return (
-        <div>
+        <div className='mx-auto max-w-7xl'>
             <Pep></Pep>
             <Tabs
                 selectedIndex={activeTab}
@@ -61,8 +73,9 @@ const Blog = () => {
                 </TabList>
 
                 {Array.from({ length: totalTabs }, (_, tabIndex) => (
-                    <TabPanel key={tabIndex}>
-                        <div className="grid grid-cols-1 gap-4">
+                    <TabPanel className="grid grid-cols-1 md:grid-cols-6 g-4" key={tabIndex}>
+
+                        <div className="grid grid-cols-1 col-span-4">
                             {data
                                 .slice(tabIndex * entriesPerTab, (tabIndex + 1) * entriesPerTab)
                                 .map(item => (
@@ -70,9 +83,18 @@ const Blog = () => {
                                         key={item.Id}
                                         className="p-2 border border-gray-300 shadow-md bg-cyan-50"
                                     >
-                                        <h2 className="text-2xl text-cyan-500 font-semibold mb-2">{item.blogName}</h2>
+                                        <h2 className="mb-2 text-2xl font-semibold text-cyan-500">{item.blogName}</h2>
+                                        <div className='flex items-center justify-start'>
+                                            <img className='w-8 h-8 mr-2 rounded-full' src={item.userImage} alt="Blog Author" />
+                                            <p className='mr-1' >{item.userName} </p>
+                                            <p> / </p>
+                                            <h2 className="ml-1">{item.date}</h2>
+                                        </div>
+                                        <div>
+                                            <img className='w-full my-3 rounded-md' src={item.PlaceImage} alt="Blog Author" />
+                                        </div>
 
-                                        <p>
+                                        <p className='text-justify'>
                                             {showFullText ? item.detailText : `${item.detailText.slice(0, 50)}... `}
                                             <span
                                                 className="text-red-500 cursor-pointer"
@@ -84,6 +106,33 @@ const Blog = () => {
 
                                     </div>
                                 ))}
+                        </div>
+
+                        <div className="grid grid-cols-1 col-span-2 bg-slate-300">
+
+                            <div>
+                                <h2>Subscribe Our Blog</h2>
+                                <form onSubmit={handleSubmit}>
+                                    <label htmlFor="email">Email:</label>
+                                    <input
+                                        type="email"
+                                        className='block w-5/6 p-2 mx-auto mb-4 bg-transparent border-b-4 border-red-500'
+                                        id="email"
+                                        value={email}
+                                        onChange={handleEmailChange}
+                                        placeholder="Enter your email"
+                                        required
+                                    />
+                                    <button
+                                        type="submit"
+                                        className="flex items-center justify-center px-2 py-1 mx-auto text-2xl text-white border-2 rounded-md shadow-lg bg-cyan-500 border-cyan-500 hover:bg-transparent hover:border-2"
+                                    >
+                                        Subscribe Now
+                                    </button>
+
+                                </form>
+                            </div>
+
                         </div>
                     </TabPanel>
                 ))}
@@ -150,7 +199,7 @@ export default Blog;
 //                                         key={item.Id}
 //                                         className="p-2 border border-gray-300 shadow-md bg-cyan-50"
 //                                     >
-//                                         <h2 className="text-2xl text-cyan-500 font-semibold mb-2">{item.blogName}</h2>
+//                                         <h2 className="mb-2 text-2xl font-semibold text-cyan-500">{item.blogName}</h2>
 //                                         <p className="text-gray-600">
 //                                             {item.showFullText ? item.detailText : `${item.detailText.slice(0, 150)}... `}
 //                                             <span
