@@ -17,6 +17,7 @@ const Home = () => {
             <SpecialDeal></SpecialDeal>
             <Destination></Destination>
             <DestinationTabs></DestinationTabs>
+
         </div>
     );
 };

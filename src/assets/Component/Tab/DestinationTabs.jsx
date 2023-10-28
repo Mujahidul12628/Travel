@@ -49,8 +49,8 @@ const DestinationTabs = () => {
 
     return (
         <div>
-            <Tabs className="bg-red-100" selectedIndex={activeTab} onSelect={handleTabChange}>
-                <TabList className="flex flex-col border-0 shadow-xl bg-emerald-500 sm:flex-row max-w-fit">
+            <Tabs className="bg-slate-100" selectedIndex={activeTab} onSelect={handleTabChange}>
+                <TabList className="flex flex-col shadow-xl bg-cyan-500 sm:flex-row max-w-fit">
                     <Tab
                         className={`mx-auto px-4 py-1 ${activeTab === 0
                             ? 'mx-auto   justify-center'
@@ -140,32 +140,8 @@ const DestinationTabs = () => {
                                     </div>
 
 
-                                    {/* Carousel of SPOT */}
+
                                     <div>
-                                        {/* <h1 className='my-5 font-semibold text-md sm:text-lg'>Visiting Spot on this Place</h1>
-                                        <div className="carousel carousel-center rounded-box">
-                                            <div className="carousel-item">
-                                                <img src={destination.detailedImages[0]} alt="Pizza" />
-                                            </div>
-                                            <div className="carousel-item">
-                                                <img src={destination.detailedImages[1]} alt="Pizza" />
-                                            </div>
-                                            <div className="carousel-item">
-                                                <img src={destination.detailedImages[2]} alt="Pizza" />
-                                            </div>
-                                            <div className="carousel-item">
-                                                <img src={destination.detailedImages[3]} alt="Pizza" />
-                                            </div>
-                                            <div className="carousel-item">
-                                                <img src={destination.detailedImages[4]} alt="Pizza" />
-                                            </div>
-                                            <div className="carousel-item">
-                                                <img src={destination.detailedImages[5]} alt="Pizza" />
-                                            </div>
-                                        </div> */}
-                                        {/* <VisitingSpot></VisitingSpot> */}
-
-
                                     </div>
 
                                 </React.Fragment>

@@ -57,9 +57,9 @@ const Blog = () => {
             <Tabs
                 selectedIndex={activeTab}
                 onSelect={handleTabChange}
-                className="bg-red-100"
+                className="bg-slate-100"
             >
-                <TabList className="flex flex-col border-0 shadow-xl bg-emerald-500 sm:flex-row max-w-fit">
+                <TabList className="flex flex-col border-0 shadow-xl bg-cyan-500 sm:flex-row max-w-fit">
                     {Array.from({ length: totalTabs }, (_, index) => (
                         <Tab
                             key={index}

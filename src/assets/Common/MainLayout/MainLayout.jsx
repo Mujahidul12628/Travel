@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { Outlet } from 'react-router-dom';
-import Navbar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import Loader from '../Loader/Loader';
 import { Toaster } from 'react-hot-toast';
 import { AuthContext } from "../../providers/AuthProvider";
+import Navbar from "../Navbar/Navbar";
 
 
 
@@ -18,6 +18,7 @@ const MainLayout = () => {
             ) : (
                 <>
                     <Navbar></Navbar>
+
                     <div className='min-h-[calc(100vh-290px)]'>
                         <Outlet />
                     </div>

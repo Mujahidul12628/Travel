@@ -26,7 +26,7 @@ const Header = () => {
 
                 <SwiperSlide>
                     <div className="h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[600px] relative rounded-b flex flex-col items-center justify-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/C2kh8B9/S3.jpg')]">
-                        <div className="absolute w-full h-full bg-black opacity-40"></div>
+                        <div className="absolute w-full h-full bg-black opacity-10"></div>
                         <div className="z-10 p-5 mx-auto text-center sm:w-2/3 sm:pl-10">
                             <h2 className="text-3xl font-bold text-white sm:text-3xl ">
                                 Elevate Your Adventures<span className='hidden sm:inline-block'>, Choose TrekVibes</span>
@@ -111,14 +111,16 @@ const Header = () => {
 
 
                 <SwiperSlide >
-                    <div className="h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[600px] relative rounded-b flex flex-col items-center justify-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/9s8L96c/s8-Custom.jpg')]">
-                        <div className="absolute w-full h-full bg-black opacity-40"></div>
+                    <div className="h-[450px] sm:h-[600px] lg:h-[600px] xl:h-[600px] relative rounded-b flex flex-col items-center justify-center bg-cover bg-center bg-blend-darken bg-[url('https://i.ibb.co/9s8L96c/s8-Custom.jpg')]">
+                        <div className="absolute w-full h-full bg-black opacity-10"></div>
                         <div className="z-10 p-5 mx-auto text-center sm:w-2/3 sm:pl-10">
                             <h2 className="text-3xl font-bold text-white sm:text-3xl ">
                                 Embrace the Journey<span className='hidden sm:inline-block'>, Choose TrekVibes</span>
                             </h2>
-                            <p className="w-5/6 mx-auto mt-5 text-justify text-md text-slate-300 sm:text-lg">
-                                Step into a world of wonders with TrekVibes. Embrace thrilling expeditions, cultural immersion, and awe-inspiring landscapes, crafting a tapestry of unforgettable travel tales and experiences.
+                            <p className="w-5/6 mx-auto mt-5 text-justify text-md text-slate-100 sm:text-lg">
+                                <span className='flex items-center justify-center'>
+                                    Embrace thrilling expeditions, cultural immersion,inspiring, and  crafting a tapestry of unforgettable travel tales and experiences.
+                                </span>
                             </p>
                             <div className='flex items-center justify-center'>
                                 <button
@@ -142,13 +144,9 @@ const Header = () => {
                 </SwiperSlide>
 
 
-
-
-
             </Swiper>
         </div>
     );
 };
 
 export default Header;
-
